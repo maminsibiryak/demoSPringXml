@@ -6,6 +6,8 @@ import domain.service.FortuneService
 
 class CricketCoach : Coach {
     private var fortuneService: FortuneService? = null
+    private var email: String? = null
+    private var team: String? = null
 
     // create a no-arg constructor
     init {
@@ -18,6 +20,22 @@ class CricketCoach : Coach {
         this.fortuneService = fortuneService
     }
 
+    fun setEmail(email: String) {
+        this.email = email
+    }
+
+    fun setTeam(team: String) {
+        this.team = team
+    }
+
+    fun getTeam(): String? {
+        return team
+    }
+
+    fun getEmail(): String? {
+        return email
+    }
+
     override fun getDailyWorkout(): String {
         return "Practice fast bowling for 15 minutes"
     }
@@ -25,6 +43,5 @@ class CricketCoach : Coach {
     override fun getDailyFortune(): String {
         return "Cricket coach, ${fortuneService!!.getFortune()}"
     }
-
 
 }

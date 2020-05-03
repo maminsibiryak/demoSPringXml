@@ -42,6 +42,9 @@
           class="domain.CricketCoach">
         <!--set up setter injection-->
         <property name="fortuneService" ref="myFortune"/>
+        <!--Injecting Literal Values-->
+        <property name="email" value="CricketCoach@mail.com"/>
+        <property name="team" value="The Beasts"/>
     </bean>
 
 
