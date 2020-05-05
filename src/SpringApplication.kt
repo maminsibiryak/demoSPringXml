@@ -20,6 +20,7 @@ fun main() {
 
     //Call class with all methods
     val cricketCoachSecond = context.getBean("cricketCoach", CricketCoach::class.java)
+    val footballCoachSecond = context.getBean("footballCoach", FootballCoach::class.java)
 
     // call methods on the bean
     println(trackCoach.getDailyWorkout())
@@ -39,6 +40,9 @@ fun main() {
     // Call fun with private vars -  email and team
     println(cricketCoachSecond.getEmail())
     println(cricketCoachSecond.getTeam())
+
+    println(footballCoachSecond.getEmail())
+    println(footballCoachSecond.getTeam())
 
     // close the context
 

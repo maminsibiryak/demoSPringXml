@@ -1,10 +1,11 @@
 package domain
 
+import domain.domain.Person
 import domain.service.Coach
 import domain.service.FortuneService
 
 
-class CricketCoach : Coach {
+class CricketCoach : Coach, Person() {
     private var fortuneService: FortuneService? = null
     private var email: String? = null
     private var team: String? = null
@@ -20,19 +21,19 @@ class CricketCoach : Coach {
         this.fortuneService = fortuneService
     }
 
-    fun setEmail(email: String) {
+    override fun setEmail(email: String) {
         this.email = email
     }
 
-    fun setTeam(team: String) {
+    override fun setTeam(team: String) {
         this.team = team
     }
 
-    fun getTeam(): String? {
+    override fun getTeam(): String? {
         return team
     }
 
-    fun getEmail(): String? {
+    override fun getEmail(): String? {
         return email
     }
 
