@@ -23,8 +23,7 @@
     <bean id="trackCoach"
           class="domain.TrackCoach"
           init-method="doMyStartupStuff"
-          destroy-method="destroy"
-          scope="prototype">
+          destroy-method="destroy">
         <!-- set up constructor injection -->
         <constructor-arg ref="myFortune"/>
     </bean>

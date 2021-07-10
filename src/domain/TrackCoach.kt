@@ -2,9 +2,8 @@ package domain
 
 import domain.service.Coach
 import domain.service.FortuneService
-import org.springframework.beans.factory.DisposableBean
 
-class TrackCoach(private val fortuneService: FortuneService) : Coach, DisposableBean {
+class TrackCoach(private val fortuneService: FortuneService) : Coach {
     var name: String? = null
 
     override fun getDailyWorkout(): String {
@@ -21,8 +20,7 @@ class TrackCoach(private val fortuneService: FortuneService) : Coach, Disposable
     }
 
     //add a destroy method
-    @Override
-    override fun destroy() {
+    fun destroy() {
         println("TrackCoach: inside method destroy")
     }
 
